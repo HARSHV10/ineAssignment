@@ -34,7 +34,7 @@ export default function Profile() {
     </div>
     </div>
     <p className='text-4xl font-bold text-gray-800 pt-10 pb-10 '>Cart Item</p>
-    <div className='flex justify-evenly'>
+    <div className='flex justify-evenly flex-wrap'>
     {cart && cart.map((item)=>{
         console.log(item)
         return (

@@ -45,11 +45,11 @@ POST https://ineassignment-1.onrender.com/menu/addMenuItem
 Content-Type: application/json
 
 {
-    "name":"Pizza",
-    "description":"Pizza is all you want to eat",
-    "price": 1.99,
-    "image": "https://cdn-icons-png.flaticon.com/512/6347/6347375.png",
-    "category" :"appetizers"
+    "name":"Cake",
+    "description":"Delicious cake, moist and indulgent!",
+    "price": 200,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYq0mXcJwWj5_V6Kj12BnFYhvgNl0UZuLyRg&s",
+    "category" :"desserts"
 }
 
 ###
