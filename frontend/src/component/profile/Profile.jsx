@@ -26,33 +26,43 @@ export default function Profile() {
 //   },[])
   console.log(user,role,cart,orderHistory);
   return (
-    <div>
-        <h1>Profile</h1>
-        <div>{user}</div>
-        <div>{role}</div>
-        {cart && cart.map((item)=>{
-            console.log(item)
-            return (
+    <div className='text-center'>
+    <div className='bg-gray-800 text-white'>
+    <h1 className='text-3xl text-white'>Profile</h1>
+    <div className="text-lg text-white">
+        Hello! <span className="text-3xl font-bold">{user}</span>, welcome! You are logged in as a {role}.
+    </div>
+    </div>
+    <p className='text-4xl font-bold text-gray-800 pt-10 pb-10 '>Cart Item</p>
+    <div className='flex justify-evenly'>
+    {cart && cart.map((item)=>{
+        console.log(item)
+        return (
                 <CartCard key={item._id} item={{"quantity":item.quantity , "menuItem":item.menuItem}}/>
-            )
-        })}
-        <input type ="number" onChange={(e)=>{
+                // <MenuCard key={item.item_Id} item={item}/>
+                )
+                })}
+        </div>
+        <div className='flex justify-center'>
+        <input className='border border-10 p-1' placeholder='Enter Table number ' type ="number" onChange={(e)=>{
             setTable(e.target.value);
-        }}/>
-        <button onClick={()=>{
-            if(table){
-                OrderItem(cart,table).then(()=>{
-                    console.log("Order Placed");
-                }).catch((err)=>{
-                    console.log(err);
-                })
-            }
-            else{
-                alert("Please enter table number");
-            }
-            }}>OrderCart</button>
-            
+            }}/>
+            <button className='bg-green-500 pl-3 pr-3 font-bold text-white' onClick={()=>{
+                if(table){
+                    OrderItem(cart,table).then(()=>{
+                        console.log("Order Placed");
+                        }).catch((err)=>{
+                            console.log(err);
+                            })
+                            }
+                            else{
+                                alert("Please enter table number");
+                                }
+                                }}>OrderCart</button>
+                                
+                                </div>
             <div>
+            <p className='text-4xl font-bold text-gray-800 pt-10 pb-10'>Order History</p>
             {orderHistory && orderHistory.map((order)=>( <OrderDetails key={order._id} order={order}/>))}
             </div>
 

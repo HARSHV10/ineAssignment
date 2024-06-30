@@ -13,6 +13,7 @@ export const AddtoCart =async (item_id , quantity)=>{
     alert("cart updated")
     return data.data
 }).catch(err=>{
+    alert("something went wrong")
     console.log(err);
 })
 

@@ -41,15 +41,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJvd
 # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFZpSXdvTmtPemd3R0lieDg1cDBCS3VtSjl0NFg2bXgzY29RSDJBWTVCdHExSUFUVmtQSEVhIiwiaWF0IjoxNzE5NjkyMzkzLCJleHAiOjE3MTk3Nzg3OTN9.vQXVJmeCxuehYTApQRO1WF0JBQVvNhh9bqkJBTF2-Mo
 # ### add menu items 
 
-POST http://localhost:3000/menu/addMenuItem
+POST https://ineassignment-1.onrender.com/menu/addMenuItem
 Content-Type: application/json
 
 {
-    "name":"Test Item4",
-    "description":"This is a test item",
-    "price": 10.99,
-    "image": "https://www.google.com",
-    "category" :"main courses"
+    "name":"Pizza",
+    "description":"Pizza is all you want to eat",
+    "price": 1.99,
+    "image": "https://cdn-icons-png.flaticon.com/512/6347/6347375.png",
+    "category" :"appetizers"
 }
 
 ###

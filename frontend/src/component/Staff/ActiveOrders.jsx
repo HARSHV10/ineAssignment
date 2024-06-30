@@ -2,13 +2,17 @@ import React ,{useContext, useEffect , useState} from 'react'
 import OrderDetails from '../OrderDetails/OrderDetails'
 import { getActiveOrders } from '../../utils/StaffUtil/staffUtils';
 import UserContext from '../../context/userContext';
+import { useNavigate } from 'react-router-dom'; 
 
 
 export default function ActiveOrders() {
-    const [order, setOrder] = useState([]);
+    const navigate = useNavigate();
     const {role}= useContext(UserContext);
+    if(role!='staff'){
+        navigate('/');
+    }
+    const [order, setOrder] = useState();
     // console.log(role);
-    
     useEffect(() => {
         
         const fetchOrder = async () => {
@@ -21,13 +25,13 @@ export default function ActiveOrders() {
     },[]);
 
     console.log(order)
-    // if(order){
-    //     return("No Active Order")
-    // }
+    if(!order){
+        return("No Active Order")
+    }
 
   return (
-    <div className='bg-slate-600 border m-2'>
-        <h1>Active Orders</h1>
+    <div className=' border m-2'>
+        <h1 className= "text-3xl text-center">Active Orders</h1>
         <div>
         {order && order.map((item)=>{
             return(
