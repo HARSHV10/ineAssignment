@@ -40,7 +40,7 @@ export default function Navbar() {
             </div>
             </div>
             </div>
-            <div className="text-white"> To signin as staff username : "staff" , password:"staff"</div>   
+            <div className='text-bold'> To signin as staff username : "staff" , password:"staff"</div>   
             </>
             )
 }
