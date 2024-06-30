@@ -1,12 +1,12 @@
 
 
 # register route 
-POST http://localhost:3000/auth/register 
+POST https://ineassignment-1.onrender.com/auth/register 
 Content-Type: application/json
 
 {
-    "username":"bot1", 
-    "password":"bot2"
+    "username":"kioken", 
+    "password":"kioken"
 }
 
 ### register route 
