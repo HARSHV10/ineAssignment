@@ -14,8 +14,8 @@ function App() {
 
 
   return (
-    <Router>
     <UserContextProvider>
+    <Router>
     <Navbar/>
     <Routes>
     <Route path="/" element={<Home/>}/>
@@ -26,8 +26,8 @@ function App() {
     <Route path="/menu" element={<MenuItems/>}/>
     <Route path="/addstaff" element={<AddStaff/>}/>
     </Routes>
-    </UserContextProvider>
     </Router>
+    </UserContextProvider>
 
   )
 }
