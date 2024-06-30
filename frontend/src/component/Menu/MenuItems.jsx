@@ -24,17 +24,19 @@ export default function MenuItems() {
 
   return (
 
-    <div>
-    <h1>Menu  Items</h1>
-    <div className='flex justify-between bg-slate-600 flex-wrap space-bet'>
+    <div className=''>
+    <h1 className="text-center text-7xl font-bold text-red-600  p-5 ">
+  Menu
+</h1>
+    <div className='p-10 flex justify-between flex-wrap space-bet'>
     
-    <button onClick={()=>{filterItems("drinks")}}>Drinks</button>
-    <button onClick={()=>{filterItems("appetizers")}}>appetizers</button>
-    <button onClick={()=>{filterItems("desserts")}}>desserts</button>
-    <button onClick={()=>{filterItems("main courses")}}>main courses</button>
+    <button className='text-white text-2xl bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded' onClick={()=>{filterItems("drinks")}}>Drinks</button>
+    <button className='text-white text-2xl bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded' onClick={()=>{filterItems("appetizers")}}>appetizers</button>
+    <button className='text-white text-2xl bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded' onClick={()=>{filterItems("desserts")}}>desserts</button>
+    <button className='text-white text-2xl bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded' onClick={()=>{filterItems("main courses")}}>main courses</button>
     
     </div>
-    <div className='flex flex-row bg-slate-600 flex-wrap space-bet'>
+    <div className='flex justify-start  flex-row  flex-wrap space-bet'>
     {menuItems.map((item)=>{
         return (
             <MenuCard key={item.item_Id} item={item}/>

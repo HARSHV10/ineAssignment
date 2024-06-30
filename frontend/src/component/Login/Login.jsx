@@ -18,7 +18,7 @@ export default function Login() {
             localStorage.setItem('token', token);
             setChange(!change)
             const data = await getUserinfo();
-            setUser(data);
+            // setUser(data);
             setloading(false);
             setUserName("");
             setPassword("");

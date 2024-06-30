@@ -18,37 +18,37 @@ export default function MenuCard({item}) {
 //     "__v": 0
 // }
   return (
-    <div className="border" onClick={()=>{
-        console.log(item_Id)
+    <div className="border rounded-xl m-3 p-4 bg-gray-700 text-white" onClick={() => {
+        console.log(item_Id);
     }}>
-        <div >
-            <img src={image} alt="item" />
+        <div className="flex">
+            <img src={image} alt="item" className="rounded-t-lg" />
         </div>
-        <div>
-        <p>{item_Id}</p>
-            <p>{name}</p>
+        <div className="p-4">
+            <p className="font-bold">Item Id  <span className='pl-3 pr-3'> {item_Id} </span></p>
+            <p className="font-bold">{name}</p>
             <p>{description}</p>
-            <p>{price}</p>
-            <p>{category}</p>
+            <p className="font-semibold">{price}</p>
+            <p className="italic">{category}</p>
         </div>
-
-        {quantity}
-        
-        <div>
-        <button onClick={()=>{
-            setQuantity(quantity+1);
-        }}>+</button>
-        <button onClick={()=>{
-            setQuantity(quantity-1>0 ? quantity-1 : 0);
-        }}>-</button>
-        </div>
-        
-        <div className='flex justify-between'>
     
+        <div className="mb-4">
+            Quantity : {quantity}
+        </div>
         
-        <button onClick={()=>{
-            AddtoCart(item_Id,quantity);
-        }}>add To Cart</button>
+        <div className="flex justify-center gap-4 mb-4">
+            <button className="bg-gray-800 text-white rounded-full px-4 py-2 hover:bg-gray-600" onClick={() => {
+                setQuantity(quantity + 1);
+            }}>+</button>
+            <button className="bg-gray-800 text-white rounded-full px-4 py-2 hover:bg-gray-600" onClick={() => {
+                setQuantity(quantity - 1 > 0 ? quantity - 1 : 0);
+            }}>-</button>
+        </div>
+        
+        <div className='flex justify-center'>
+            <button className="bg-green-500 text-white rounded-lg px-6 py-2 hover:bg-green-400" onClick={() => {
+                AddtoCart(item_Id, quantity);
+            }}>Add To Cart</button>
         </div>
     </div>
   )

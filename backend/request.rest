@@ -5,8 +5,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "username":"hello", 
-    "password":"hello"
+    "username":"bot1", 
+    "password":"bot2"
 }
 
 ### register route 
