@@ -21,7 +21,8 @@ export default function Navbar() {
     }
     return (
         <div className='flex flex justify-between items-center p-4 bg-gray-800 text-white'>
-            <div className='flex gap-4  flex-wrap'>
+        <div className="text-white"> To signin as staff , username : "staff" , password:"staff"</div>   
+        <div className='flex gap-4  flex-wrap'>
                 {routes.map((route) => (
                     <Link key={route.path} to={route.path} className='bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded'>
                         {route.name}
